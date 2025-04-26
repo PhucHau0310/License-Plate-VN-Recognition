@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+    backend:
+        container_name: license-plate-recognition-backend
+        build:
+            context: ./be
+            dockerfile: Dockerfile
+        ports:
+            - '8000:8000'
+
+    frontend:
+        container_name: license-plate-recognition-frontend
+        build:
+            context: ./fe
+            dockerfile: Dockerfile
+        ports:
+            - '4002:3000'
+        depends_on:
+            - backend
