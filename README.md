@@ -1,16 +1,14 @@
-# Vietnamese License Plate Recognition
-
-## Overview
+# 🚀 Vietnamese License Plate Recognition
 
 This project uses YOLOv8 to detect license plates and EasyOCR to recognize text from images.
 
-## Training Process
+## ✨ Training Process
 
-### Training Pipeline
+### 📈 Training Pipeline
 
 ![Training Pipeline](be/src/Reports/training_pipeline.gv.png)
 
-### Training Results
+### 📈 Training Results
 
 #### Loss and Metrics
 
@@ -24,16 +22,52 @@ This project uses YOLOv8 to detect license plates and EasyOCR to recognize text 
 
 ![Confusion Matrix](be/src/Reports/confusion_matrix_normalized.png)
 
-## API Pipeline
+## 🔌 API Pipeline
 
 ### Processing Flow
 
 ![API Pipeline](be/src/Reports/pipeline_diagram.gv.png)
 
-### Sample Output
+### 📸 Screenshots
 
 ![Sample Output](be/src/Reports/output_image_sample.png)
 
-### Run Project with dockercompose
+### 📁 Project Structure
 
-Cd root project run docker-compose up -d --build
+```
+root/
+├── be/
+│   ├── src/
+│   │   ├── models/
+|   |   ├── app/
+|   |	├── data/
+│   │   ├── reports/
+│   │   └── utils/
+│   ├── Dockerfile
+│   └── requirements.txt
+├── fe/
+│   ├── src/
+│   │   ├── app/
+│   │   └── public/
+│   ├── Dockerfile
+│   └── package.json
+├── docker-compose.yml
+└── README.md
+```
+
+### 📦 Installation
+
+```bash
+git clone https://github.com/PhucHau0310/License-Plate-VN-Recognition.git
+cd root project
+docker-compose up -d --build
+```
+
+### 📜 License
+
+This project is licensed under the MIT License.
+
+### 👤 Author
+
+-   GitHub: PhucHau0310
+-   Email: haunhpr024@gmail.com
