@@ -13,13 +13,9 @@ app = FastAPI(
     description="API for recognizing Vietnamese license plates from images"
 )
 
-origins = ["http://localhost:3000", "http://127.0.0.1:3000", "http://localhost:4002", "http://127.0.0.1:4002", 
-           "https://license-plate-recognition-fe.hau.io.vn", "https://license-plate-recognition-fe.hau.io.vn:4002",
-           "https://license-plate-recognition-fe.hau.io.vn:3000"]
-
 app.add_middleware(
 CORSMiddleware,
-allow_origins=origins,
+allow_origins=["*"],
 allow_credentials=True,
 allow_methods=["*"],
 allow_headers=["*"],
